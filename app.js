@@ -9,6 +9,7 @@ require('dotenv').config()
 
 //Routes
 const userRoute=require('./api/routes/UserManagement/user')
+const testRoute=require('./api/test')
 
 app.use(morgan('dev'))
 
@@ -39,7 +40,10 @@ app.use(bodyParser.json())
 
 
 // Routes
+
+
 app.use('/user', userRoute)
+app.use('/',testRoute)
 
 
 //Error handeling
